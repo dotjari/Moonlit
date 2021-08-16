@@ -19,11 +19,7 @@ function WndProc ( byval hWnd as HWND, _
             hDC = BeginPaint( hWnd, @pnt )
             GetClientRect( hWnd, @rct )
             
-            DrawText( hDC, _
-            		  "Hello, World!", _
-            		  -1, _
-                      @rct, _
-                      DT_SINGLELINE or DT_CENTER or DT_VCENTER )
+		'draw
             
             EndPaint( hWnd, @pnt )
             
