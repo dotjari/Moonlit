@@ -4,7 +4,7 @@ This Game Engine uses WinAPI as the main API for graphics and audio.
 
 <h3>Syntax</h3>
 How to create a simple window:
-```freebasic
+```basic
 'Include the Engine
 #include "AppWindow.bas"
 
