@@ -1,4 +1,6 @@
-#Include "windows.bi"
+#Include once "windows.bi"
+
+
 
 Type cWindow Extends Object
 
@@ -10,8 +12,8 @@ Type cWindow Extends Object
     Declare Virtual Sub onCreate() 
     Declare Virtual Sub onUpdate() 
     Declare Virtual Sub onDestroy() 
-     
     
+
     Dim As Integer mWidth = 480
     Dim As Integer mHeight = 480
     
@@ -31,13 +33,18 @@ function WndProc ( byval hWnd as HWND, _
                    byval wParam as WPARAM, _
                    byval lParam as LPARAM ) as LRESULT
     
+            Dim As cWindow m_cwindow 
     function = 0
     
     select case( wMsg )
         case WM_CREATE            
             exit function
+        Case WM_PAINT
+            'hdc = BeginPaint(hWnd, @ps)
+            ' TextOutW(hdc, 32, 32, "Text", 1)
+            'EndPaint(hwnd, @ps)
+
     	case WM_DESTROY
-            Dim As cWindow m_cwindow 
 		    m_cWindow.onDestroy()
     		PostQuitMessage( 0 )
             exit function
@@ -91,6 +98,8 @@ Function cWindow.Init() As Boolean
         TranslateMessage( @wMsg )
         DispatchMessage( @wMsg )
     wend
+
+    m_is_run = true
     
     'function = wMsg.wParam
 
@@ -109,6 +118,14 @@ End Sub
 Function cWindow.isRun() As Boolean
     return m_is_run
 End Function
+
+Function cWindow.Release() As Boolean
+    if (DestroyWindow(hWnd)) then
+		return false
+    EndIf
+	return true
+
+End function
 
 Function cWindow.broadcast() As Boolean
 	Dim As MSG msg
