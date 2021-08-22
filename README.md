@@ -3,7 +3,7 @@ A small game engine for RPGs and ADVENTUREs made in Freebasic for my game, Versi
 This Game Engine uses WinAPI as the main API for graphics and audio.
 
 Syntax // How to create a simple window:
-```basic
+```freebasic
 'Include the Engine
 #include "AppWindow.bas"
 
