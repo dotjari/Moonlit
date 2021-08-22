@@ -21,12 +21,12 @@ if (app.init()) Then
 EndIf
 ```
 # "Guide"
-`AppWindow.bas` ~ Engine's main file
-`Window.bas` ~ Window creation "module"
-`GraphicsEngine.bas` ~ Engine's graphics "Module" 
+1. `AppWindow.bas` ~ Engine's main file
+2. `Window.bas` ~ Window creation "module"
+3. `GraphicsEngine.bas` ~ Engine's graphics "Module" 
 # Built with
-[Freebasic](https://www.freebasic.net/) - The BASIC Dialect i use
-[WinAPI] - The normal Microsoft Windows Application Programming Interface
+1. [Freebasic](https://www.freebasic.net/) - The BASIC Dialect i use
+2. [WinAPI] - The normal Microsoft Windows Application Programming Interface
 
 
 ## How to Contribute
