@@ -20,7 +20,7 @@ if (app.init()) Then
 	wEnd
 EndIf
 ```
-#TODO List:
+# TODO List:
 * [x] Window Creator
 * [ ] Basic Graphics (Circles, Rectangles, etc.)
 * [ ] Sprite Loader
