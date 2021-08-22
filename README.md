@@ -1,5 +1,5 @@
 # Apollo
-A small game engine for RPGs and ADVENTUREs made in Freebasic for my game, Versis.
+A small game engine for RPGs and **"**ADVENTURE**"**s made in Freebasic for my game, Versis.
 This Game Engine uses WinAPI as the main API for graphics and audio.
 
 # Syntax
