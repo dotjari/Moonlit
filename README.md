@@ -20,3 +20,14 @@ if (app.init()) Then
 	wEnd
 EndIf
 ```
+#TODO List:
+* [x] Window Creator
+* [ ] Basic Graphics (Circles, Rectangles, etc.)
+* [ ] Sprite Loader
+* [ ] Sprite Renderer
+* [ ] Double Buffering
+* [ ] Audio Loader
+* [ ] Audio player
+* [ ] MultiThreading
+* [ ] Colision Detecting
+* [ ] Interpreter for Game Event Script
