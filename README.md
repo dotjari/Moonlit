@@ -52,3 +52,8 @@ Steps to contribute:
 * [ ] MultiThreading
 * [ ] Colision Detecting
 * [ ] Interpreter for Game Event Script
+
+# Credits
+The resources i used:
+1. [Microsoft Docs] (https://docs.microsoft.com/)
+2. [Frebasic Docs] (https://www.freebasic.net/)
