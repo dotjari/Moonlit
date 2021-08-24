@@ -56,4 +56,4 @@ Steps to contribute:
 # Credits
 The resources i used:
 1. [Microsoft Docs] (https://docs.microsoft.com/)
-2. [Frebasic Docs] (https://www.freebasic.net/)
+2. [Freebasic Docs] (https://www.freebasic.net/)
