@@ -10,7 +10,12 @@
 //Device contexts
 HDC hMainDC;
 HDC memoryDC;
-
+// Window Handler
+HWND hwnd;          
+//Window Elements method
+void addElements();
+//LPARAM
+LPARAM lp;
 //Window Struct
 struct GameWindow
 {
@@ -21,8 +26,10 @@ struct GameWindow
 	void onDraw();
 	void onDestroy();
 	
+	int getWidth();
+	int getHeight();
+
 	WNDCLASSEX winclass; // Window class
-	HWND hwnd;           // Window Handler
 	MSG msg;             // The message variable
 	DWORD nStartTime;
 };
@@ -33,7 +40,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	PAINTSTRUCT ps;  // PaintStrcut Variable
 	HDC hdc;         // Device context handle
-
+	lp = lparam;
 	switch(msg)
 	{
 		case WM_CREATE:  // On Create Method
@@ -106,9 +113,13 @@ bool GameWindow::initWindow(LPCSTR lTitle, int nWidth, int nHeight)
 	
     onCreate();
           
+	SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE)&~WS_SIZEBOX);
 
     HBITMAP hBitmap = CreateCompatibleBitmap(hMainDC,nWidth, nHeight);
 	
+	SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_MAXIMIZEBOX);
+
+
 	memoryDC = CreateCompatibleDC(hMainDC);
 		
 	// Main loop 
@@ -169,5 +180,27 @@ bool GameWindow::initWindow(LPCSTR lTitle, int nWidth, int nHeight)
 
 	// Return to Windows - this is the exit code of the WM_QUIT message
 	return(msg.wParam);
+}
+
+int GameWindow::getWidth()
+{
+	int width;
+	RECT rect;
+	if(GetWindowRect(hwnd, &rect))
+	{
+  		width = rect.right - rect.left;
+	}
+	return  width;
+}
+
+int GameWindow::getHeight()
+{
+	int height;
+	RECT rect;
+	if(GetWindowRect(hwnd, &rect))
+	{
+  		height = rect.bottom - rect.top;
+	}
+	return  height;
 }
 #endif
