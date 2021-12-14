@@ -25,7 +25,7 @@ void GameWindow::onDestroy()
 //main function
 int main(int argc, char**argv[])
 {
-    //init-window function
+	//init-window function
 	Win.initWindow("Teste",800,600);
 	return 0;
 }
@@ -49,10 +49,10 @@ Steps to contribute:
 
 # TODO List:
 * [x] Window Creator
-* [/] Basic Graphics (Circles, Rectangles, etc.)
-* [/] Sprite Loader
-* [/] Sprite Renderer
-* [/] Double Buffering
+* [ ] Basic Graphics (Circles, Rectangles, etc.)
+* [ ] Sprite Loader
+* [ ] Sprite Renderer
+* [x] Double Buffering
 * [ ] Audio Loader
 * [ ] Audio player
 * [ ] MultiThreading
