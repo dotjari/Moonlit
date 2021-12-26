@@ -5,16 +5,21 @@ This Game Engine uses WinAPI as the main API for graphics and audio.
 # Syntax
 How to create a simple window:
 ```vb
-/#include "core/Window.bas"
+#include "core/Window.bas"
 #include "core/Keyboard.bas"
 #include "core/Graphics.bas"
 
 Dim win As cWindow
 Sub cWindow.onCreate()
+
 End Sub
+
 Sub cWindow.onDraw()
+
 End Sub
+
 Sub cWindow.onDestroy()
+
 End Sub
 
 win.initWindow("Test",800,600)
