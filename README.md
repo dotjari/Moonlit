@@ -1,4 +1,4 @@
-# Moonlit
+<img src='./img/logo.png'>
 A small game engine for **RPG**s and **ADVENTURE**s made in **FreeBasic** for my game, **Versis**.
 This Game Engine uses WinAPI as the main API for graphics and audio.
 
